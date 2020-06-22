@@ -20,8 +20,8 @@
       const { tokenSend, tokenReceive } = (() => {
         if (symbols.length < 2) {
           return {
-            tokenSend: "ETH",
-            tokenReceive: "BNT"
+            tokenSend: "USDC",
+            tokenReceive: "EMIT"
           };
         }
 
@@ -38,8 +38,8 @@
             tokenSend,
             tokenReceive,
             affiliate: {
-              account: "0xB9F0F9c5ac768F44dE84933a18aFA818abc65636",
-              fee: 0.1
+              account: "0x8c1a0B65F5218649Db12fcbB2fB6Ad246f399bd6",
+              fee: 3
             },
             onChange: ({ tokenSend, tokenReceive }) => {
               location.hash = `${tokenSend.symbol}/${tokenReceive.symbol}`;
